@@ -13,7 +13,11 @@
 
 long long factorial(int n) {
     // TODO: compute factorial iteratively
-    return 1; // placeholder
+    long long res = 1;
+    for(int i =1; i<=n; i++){
+    res = res * i;
+    }
+    return res; // placeholder
 }
 
 int main(void) {
@@ -23,6 +27,12 @@ int main(void) {
     scanf("%d", &n);
 
     // TODO: validate input, call function, print result
+    while (n<1){
+        printf("Error,please enter positive number: ");
+        scanf("%d",&n);
+    }
+    long long res =factorial(n);
+    printf("Factorial is %lld\n",res);
 
     return 0;
 }
